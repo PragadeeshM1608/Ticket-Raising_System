@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Ticket - Help Desk</title>
+   <link rel="stylesheet" href="./frontend/new-ticket.css" />
+  <script src="https://kit.fontawesome.com/a2e0e6f91e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="login-box">
+    <h2><i class="fas fa-plus-circle"></i> New Ticket</h2>
+    <form id="ticketForm" enctype="multipart/form-data">
+      <label for="userId">User ID:</label>
+      <input type="text" id="userId" name="userId" value=${user.username} title="you cannot change this field" readonly draggable="true" />
+         
+      <div class="input-group">
+        <i class="fas fa-tag"></i>
+        <input type="text" id="ticketName" placeholder="Ticket Name" title="Enter name suitable for the problem " required autofocus/>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-exclamation-triangle"></i>
+        <select id="priority" title="select the priotrity">
+          <option value="" >Select Priority</option>
+          <option value="low">Low</option>
+          <option value="mid">Mid</option>
+          <option value="high">High</option>
+          <option value="emergency">Emergency</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-heading"></i>
+        <input type="text" id="title" placeholder="Title" required />
+      </div>
+      <div class="input-group">
+        <i class="fas fa-building"></i>
+        <select id="department">
+          <option value="">Select Department</option>
+          <option value="product">Product</option>
+          <option value="sales">Sales</option>
+          <option value="support">Support</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-align-left"></i>
+        <textarea id="description" placeholder="Description (optional)"></textarea>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="file" id="attachment" name="attachment"/>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="customerName" placeholder="Customer Name" required />
+      </div>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" placeholder="Email" required />
+      </div>
+      <dialog role="alert">
+        <div>
+        <button  class="btn-morph" type="submit">Submit Ticket</button>&nbsp;
+        <button type="reset" draggable="true"> Reset form</button>&nbsp;
+        <button type="button" onclick=cancel() title="yse">Cancel</button>
+    </div>
+      </dialog>
+      <div></div>
+      <div></div>
+       
+      
+      <p class="error" id="errorMsg"></p>
+    </form>
+    <time datetime="YYYY-MM-DDTHH:mm:ss">Readable Date/Time</time>
+
+  </div>
+  <!-- <script src="./frontend/js/new-ticket.js"></script> -->
+</body>
+</html>

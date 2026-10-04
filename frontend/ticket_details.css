@@ -1,0 +1,53 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #eaeef1;
+  padding: 40px;
+  color: #333;
+}
+
+.ticket-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+}
+
+h2 {
+  color: #0a74da;
+  text-align: center;
+}
+
+.field {
+  margin: 15px 0;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.value {
+  margin-left: 10px;
+}
+
+.attachment a {
+  color: #0a74da;
+  text-decoration: none;
+}
+
+.back-btn {
+  margin-top: 30px;
+  display: block;
+  text-align: center;
+  background: #0a74da;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #004a99;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard - Help Desk</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header>
+    <div><h1  class="typewriter">🎯 Help Desk - Admin Dashboard</h1></div>
+    
+
+    <div class="user-info-wrapper">
+      <h3><span id="admin-id" class="hover-user">User: <span id="admin-name"></span></span></h3>
+      <div class="user-details-popup" id="admin-popup">
+        <p><strong>Username:</strong> <span id="popup-username"></span></p>
+        <p><strong>Email:</strong> <span id="popup-email"></span></p>
+        <p><strong>Role:</strong> <span id="popup-role"></span></p>
+        <p><strong>Login Time:</strong> <span id="popup-login-time"></span></p>
+      </div>
+    </div>
+
+    
+
+    <button onclick="logout()" class="my-button">Logout</button>
+  </header>
+
+  <section class="dashboard">
+    <div class="controls">
+      <button  class="my-button" onclick="window.location.href='new-ticket.html'">➕ New Ticket</button>
+    </div>
+
+    <div id="graphContainer">
+      <canvas id="ticketChart"></canvas>
+    </div>
+
+    <table id="ticketTable">
+      <thead>
+        <tr>
+          <th>Select</th>
+          <th>Ticket No</th>
+          <th>Priority</th>
+          <th>Title</th>
+          <th>Department</th>
+          <th>Status</th>
+          <th>Date & Time</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="table-actions">
+      <button class="my-button"  onclick="deleteSelected()">🗑️ Delete</button>
+      <button class="my-button"  onclick="cancelSelected()">🚫 Cancel selection</button>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./js/admin.js"></script>
+</body>
+</html>

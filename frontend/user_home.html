@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Dashboard - Help Desk</title>
+  <link rel="stylesheet" href="./user_home.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo"><h3><button class="btn-bounce">🎧</button>&nbsp;&nbsp;Help Desk</h3></div>
+    <div>
+      <div class="user-info-wrapper">
+  <span id="user-id" class="hover-user">User: <span id="user-name"></span></span>
+  &nbsp;
+  &nbsp;
+  &nbsp;
+  <div class="user-details-popup" id="user-popup">
+    <p><strong>Username:</strong> <span id="popup-username"></span></p>
+    <p><strong>Email:</strong> <span id="popup-email"></span></p>
+    <p><strong>Role:</strong> <span id="popup-role"></span></p>
+    <p><strong>Login Time:</strong> <span id="popup-login-time"></span></p>
+  </div>
+  </div>
+       <button id="logout" onclick="window.location.href='./login.html'">🚪 Logout</button>
+       &nbsp;
+       &nbsp;
+       &nbsp;
+      <div class="settings">
+        ⚙️ Settings
+        <div class="settings-menu">
+          <button id="theme-toggle">🌗 Toggle Theme</button>
+          <button id="delete-account">🗑️ Delete Account</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="header">
+      <h2 class="typing" >Your Raised Tickets</h2>
+      <button onclick="location.href='new-ticket.html'" class="new-ticket">➕ New Ticket</button>
+    </div>
+    
+    <table id="ticketTable" >
+      <thead>
+        <tr>
+          <th class="slide-left-delay">Ticket #</th>
+          <th class="slide-right-delay">Priority</th>
+          <th class="slide-left-delay">Title</th>
+          <th class="slide-right-delay">Department</th>
+          <th class="slide-left-delay">Status</th>
+          <th class="slide-right-delay">Date</th>
+          <th class="slide-left-delay">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamically filled with JS -->
+      </tbody>
+    </table>
+    
+    <p id="no-tickets">No tickets yet.</p>
+  </div>
+
+  
+  
+  <script src="./js/user_home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f7fb;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(to right, #0f2027, #2c5364);
+  color: white;
+  /* padding: 1rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-user {
+  cursor: pointer;
+  font-weight: bold;
+  color: #0a74da;
+}
+
+.user-details-popup {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: black;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.user-info-wrapper:hover .user-details-popup {
+  display: block;
+}
+
+.dashboard {
+  padding: 2rem;
+}
+
+#ticketTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+#ticketTable th, #ticketTable td {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+#ticketTable th {
+  background-color: #e2e8f0;
+}
+
+.table-actions {
+  margin-top: 1rem;
+}
+
+#graphContainer {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto 0 auto;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0px solid white;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 2s steps(50, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.my-button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* Remove borders */
+  padding: 10px 20px; /* Add padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Inline-block for layout */
+  font-size: 16px; /* Font size */
+  margin: 4px 2px; /* Add some margin */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.my-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
